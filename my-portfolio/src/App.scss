@@ -1,0 +1,62 @@
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; // so when we scroll -> animation will work slower -> look better
+}
+
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #0c0c1d;
+    color:lightgray;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+@mixin mobile{
+    @media (max-width :738px){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (max-width :1366px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width :1024px){
+        @content;
+    }
+}
+
+// create a style for test.jsx component
+.course{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+    }
+}
+
+
+// steps ;
+// section and html ma scroll mate badhu set karyu
+// background color set karyo and font color
